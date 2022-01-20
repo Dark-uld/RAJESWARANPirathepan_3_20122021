@@ -40,18 +40,26 @@
     }
     to {
        opacity: 0.4;
-       scale:1;
+       scale: 1;
     }
 }
 
 @keyframes chargement{
     from {
         transform: rotate(0deg);
-        scale:1;
+        scale: 1;
     }
     to {
         transform: rotate(360deg);
-        scale:1;
+        scale: 1;
     }
 }
 
+@keyframes screen{
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1;
+    }
+}
