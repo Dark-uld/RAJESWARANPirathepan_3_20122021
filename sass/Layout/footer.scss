@@ -1,0 +1,36 @@
+/* FOOTER */
+
+footer {
+    width: auto;
+    padding: 25px 5% 40px 5%;
+    background-color: $grisfonce;
+    color: $blanc;
+
+    img {
+        width: 100px;
+        margin-bottom: 25px;
+    }
+
+    li {
+        list-style-type: none;
+        margin-bottom: 10px;
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin: 0 8px 0 0;
+        }
+
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+
+        a {
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

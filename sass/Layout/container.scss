@@ -1,0 +1,565 @@
+body{
+    min-height:100%;
+    position: relative;
+}
+
+.zooming:hover{
+    transform: scale(1.02);
+}
+
+.loading {
+
+    &_screen {
+        z-index: 50;
+        display: flex;
+        width:100%;
+        height:100%;
+        position: absolute;
+        justify-content: center;
+        transform: scale(0);
+
+        animation: screen 3.9s;
+    }
+    
+
+    &_background {
+        width:100%;
+        height:100%;
+        opacity: 0;
+        transform: scale(0);
+        background-color: $grisclair;
+        animation: fading 3.9s cubic-bezier(.77,.27,.79,.27);
+    }
+
+    &_icon {
+        position: absolute;
+        z-index: 51;
+        color: $prim;
+        font-size: 100px;
+        width:100px;
+        height:100px;
+        margin-top: 400px;
+        transform: scale(0);
+        animation: chargement 1.3s linear;
+        animation-iteration-count: 3;
+    }
+}
+
+/* MAIN INDEX */
+
+/* LOCATION */
+.location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+    background-color: rgb(234, 234, 234);
+    box-shadow: inset 0 15px 5px -15px $grisclair;
+
+    i {
+        position: relative;
+        left: -15px;
+    }
+}
+
+/* EXPLORATION */
+.explorer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(246, 246, 246);
+    padding: 45px 5% 55px 5%;
+
+    h1 {
+        text-align: center;
+        row-gap: 15px;
+        margin-bottom: 20px;
+        padding: 0 25px;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+}
+
+/* FONCTIONNEMENT */
+.fonction {
+    padding: 65px 5% 65px 5%;
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    &_liste{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_button {
+        width: 325px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(246, 246, 246);
+        margin-bottom: 20px;
+        border-radius: 20px;
+    @include shadow_claire;
+        &:last-child {
+            margin-bottom: 0px;
+        @include shadow_fonce;
+        }
+        
+    }
+
+    &_num{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        background-color: $prim;
+        color: $blanc;
+        font-size: 12px;
+        position: relative;
+        left: -12px;
+        border-radius: 50%;
+    }
+
+    &_text{
+        margin-left: 25px;
+    }
+
+    &_logo{
+        margin-left: 5px;
+        color: $grislogo
+
+    }
+
+    &_button:hover{
+        background-color: $prim_claire;
+
+        .fonction_logo {
+            color: $prim;
+        }
+    }
+}
+
+/* RESTAURANT */
+.restaurant {
+    padding: 55px 5% 65px 5%;
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    &_menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    &_carte {
+        margin-bottom: 20px;
+        background-color: $blanc;
+        border-radius: 10px;
+        width: 100%;
+    @include shadow_fonce;
+       
+
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+
+    &_logo{
+        overflow: hidden;
+        width: 100%;
+        height: 175px;
+        position: relative;
+        
+        border-radius: 10px 10px 0 0;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 175px;
+        }
+    }
+
+    &_new{
+        background-color: $tert;
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+        color: $tertfonce;
+        border-radius: 2px;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 25px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        
+    }
+
+
+     
+}
+
+/* MAIN MENU */
+
+/* IMAGE PRESENTATION */
+
+.a_la_francaise {
+    background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.la_palette{
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.la_note {
+    background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.le_delice {
+    background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+/* MENU */
+
+.menu {
+    
+    &_affiche {
+        height: 250px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    &_restaurant {
+        background-color: rgb(246, 246, 246);
+        padding: 40px 5% 80px 5%;
+        border-radius: 30px 30px 0 0;
+        margin-top: -30px;
+    }
+
+    &_titre {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 40px;
+
+        h1 {
+            font-family: 'Shrikhand', cursive;
+            font-size: 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            
+        }
+        
+    }
+
+    
+
+    &_choice {
+        width: 100%;
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 50px;
+        }
+        hr {
+            width: 40px;
+            border : 0.5px solid $tert;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+    }
+
+    &_liste{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        transform-origin: top;
+        animation: affichage 2s;
+    }
+
+    &_plat {
+        height: 75px;
+        width: 325px;
+        max-width: 100%;
+        background-color: $blanc;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 15px;
+        @include shadow_fonce;        
+        overflow: hidden;
+        
+
+        &:hover , &:focus {
+            
+            cursor: pointer;
+            .menu_commande {
+                width: 75px;
+
+
+                i {
+                    animation : rotation 1s;
+                }
+            }
+            
+        }
+
+        
+    }
+
+    &_commande {
+        display:flex; 
+        width : 0px;
+        transform-origin: 100%;
+        background-color: $tert;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 15px 15px 0;
+        i {
+            color: $blanc;
+        }
+
+        transition: all 0.6s ease-in-out; 
+            
+     }
+
+     
+    
+    
+
+    &_details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 25%;
+        padding: 15px 15px 15px 10px ;
+    }
+
+    &_prix {
+        min-width: 30px;
+        width:30px;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 80%;
+        width: 100%;
+
+        h3, div {
+            height: 25px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+
+    }
+
+
+
+    &_boutton {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* FORMAT TABLETTE */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .fonction {
+        &_liste{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 25px 15px;
+
+        }
+
+    }
+
+
+    .restaurant {
+        &_menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 25px 10px;
+        }
+
+        &_carte {
+            width: 275px;
+            margin-bottom: 0px;
+        }
+
+        &_logo {
+            width: 275px;
+
+            img {
+            width: 275px;
+            }
+        }
+
+
+    }
+    .menu {
+        &_restaurant {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        &_choice {
+            width: 340px;
+
+            h2, hr {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
+         
+        &_titre{
+            width: 100%;
+            justify-content: center;
+
+            h1 {
+                margin-right: 20px;
+            }
+
+        }
+
+        &_check{
+            width:100%;
+        }
+
+    }
+}
+
+/* FORMAT DESKTOP */
+@media (min-width: 1024px){
+
+    .fonction {
+        &_liste{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 25px 15px;
+
+        }
+
+    }
+
+
+    .restaurant {
+        &_menu {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 25px 15px;
+        }
+
+        &_carte {
+            width: 275px;
+            margin-bottom: 0px;
+        }
+
+        &_logo {
+            width: 275px;
+
+            img {
+            width: 275px;
+            }
+        }
+
+
+    }
+
+    .menu {
+        &_restaurant {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+        }
+
+        &_choice {
+            width: 400px;
+
+            h2, hr {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
+         
+        &_titre{
+            width: 100%;
+            justify-content: center;
+
+            h1 {
+                margin-right: 20px;
+            }
+
+        }
+
+        &_check{
+            width:100%;
+        }
+
+    }
+    
+    
+    
+}
+
+
