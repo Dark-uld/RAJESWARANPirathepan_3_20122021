@@ -1,0 +1,60 @@
+
+.like {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    .logo {
+        
+        width: 25px;
+        font-size: 25px;
+        position: relative;
+        right: 25px;
+        
+        &_hover{
+            width: 25px;
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            background: linear-gradient(to top right, #FF79DA,  #9356DC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            background-clip: text;
+            opacity : 0;
+            transform: scale(0);
+            transition: all 0.5s;
+        }
+
+        
+
+    }
+    &:hover {
+        .logo {
+            &_hover {
+                opacity: 1;
+                transform: scale(1);
+
+            }
+        }
+        
+    }
+}
+
+
+.boutton {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to bottom right, #FF79DA, #a15adc);
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0px 3px 4px 2px rgba(157, 157, 157, 0.3);
+    &:hover{
+    background: linear-gradient(to bottom right, #f54ac5, #a15adc);
+    box-shadow: 0px 3px 4px 2px rgba(119, 119, 119, 0.3);
+    }
+}
+
