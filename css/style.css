@@ -30,6 +30,13 @@ a {
   color: black;
 }
 
+header {
+  display: flex;
+  padding: 20px 5% 15px 5%;
+  justify-content: center;
+  position: relative;
+}
+
 /* FOOTER */
 footer {
   width: auto;
