@@ -64,6 +64,14 @@ a {
     transform: scale(1);
   }
 }
+@keyframes affichage {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
 .like {
   width: 25px;
   display: flex;
@@ -387,6 +395,8 @@ body {
   flex-direction: column;
   align-items: center;
   row-gap: 15px;
+  transform-origin: top;
+  animation: affichage 2s;
 }
 .menu_plat {
   height: 75px;

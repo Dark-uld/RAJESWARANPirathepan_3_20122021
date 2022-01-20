@@ -310,6 +310,8 @@ body{
         flex-direction: column;
         align-items: center;
         row-gap: 15px;
+        transform-origin: top;
+        animation: affichage 2s;
     }
 
     &_plat {
