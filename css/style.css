@@ -322,6 +322,143 @@ body {
   margin-bottom: 10px;
 }
 
+/* MAIN MENU */
+/* IMAGE PRESENTATION */
+.a_la_francaise {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.la_palette {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.la_note {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.le_delice {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+/* MENU */
+.menu_affiche {
+  height: 250px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu_restaurant {
+  background-color: #f6f6f6;
+  padding: 40px 5% 80px 5%;
+  border-radius: 30px 30px 0 0;
+  margin-top: -30px;
+}
+.menu_titre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.menu_titre h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+}
+.menu_titre .logo {
+  font-size: 25px;
+}
+.menu_choice {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.menu_choice:last-child {
+  margin-bottom: 50px;
+}
+.menu_choice hr {
+  width: 40px;
+  border: 1.5px solid #99E2D0;
+  margin-bottom: 10px;
+}
+.menu_choice h2 {
+  margin-bottom: 5px;
+}
+.menu_liste {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.menu_plat {
+  height: 70px;
+  width: 325px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 1px rgba(150, 150, 150, 0.25);
+  overflow: hidden;
+}
+.menu_plat:hover, .menu_plat:focus {
+  cursor: pointer;
+}
+.menu_plat:hover .menu_commande, .menu_plat:focus .menu_commande {
+  width: 75px;
+}
+.menu_plat:hover .menu_commande i, .menu_plat:focus .menu_commande i {
+  animation: rotation 1s;
+}
+.menu_commande {
+  display: flex;
+  width: 0px;
+  transform-origin: 100%;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  transition: all 0.6s ease-in-out;
+}
+.menu_commande i {
+  color: white;
+}
+.menu_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 25%;
+  padding: 15px 15px 15px 10px;
+}
+.menu_prix {
+  min-width: 30px;
+  width: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.menu_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 80%;
+  width: 100%;
+}
+.menu_description h3, .menu_description div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* FORMAT TABLETTE */
 @media (min-width: 768px) and (max-width: 1024px) {
   .fonction_liste {
