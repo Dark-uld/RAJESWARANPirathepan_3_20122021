@@ -30,4 +30,34 @@ a {
   color: black;
 }
 
+/* FOOTER */
+footer {
+  width: auto;
+  padding: 25px 5% 40px 5%;
+  background-color: #222222;
+  color: white;
+}
+footer img {
+  width: 100px;
+  margin-bottom: 25px;
+}
+footer li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+footer li img {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px 0 0;
+}
+footer li:last-child {
+  margin-bottom: 0px;
+}
+footer li a {
+  color: white;
+}
+footer li a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
