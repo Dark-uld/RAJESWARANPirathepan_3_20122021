@@ -509,7 +509,7 @@ body {
   width: 100%;
 }
 .menu_description h3, .menu_description div {
-  height: 15px;
+  height: 17px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
