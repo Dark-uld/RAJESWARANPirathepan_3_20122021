@@ -44,7 +44,7 @@ a {
     transform: scale(1);
   }
   to {
-    opacity: 0.4;
+    opacity: 0.2;
     transform: scale(1);
   }
 }
@@ -137,7 +137,7 @@ a {
   background-clip: text;
   opacity: 0;
   transform: scale(0);
-  transition: all 0.5s;
+  transition: all 0.6s cubic-bezier(0.47, 0.09, 0.94, 0.79);
 }
 .like:hover .logo_hover {
   opacity: 1;
@@ -197,7 +197,7 @@ body {
   position: absolute;
   justify-content: center;
   transform: scale(0);
-  animation: screen 3.9s;
+  animation: screen 2.7s;
 }
 .loading_background {
   width: 100%;
@@ -205,7 +205,7 @@ body {
   opacity: 0;
   transform: scale(0);
   background-color: #a7a7a7;
-  animation: fading 3.9s cubic-bezier(0.77, 0.27, 0.79, 0.27);
+  animation: fading 2.7s cubic-bezier(0.77, 0.27, 0.79, 0.27);
 }
 .loading_icon {
   position: absolute;
@@ -216,7 +216,7 @@ body {
   height: 100px;
   margin-top: 400px;
   transform: scale(0);
-  animation: chargement 1.3s linear;
+  animation: chargement 0.9s linear;
   animation-iteration-count: 3;
 }
 

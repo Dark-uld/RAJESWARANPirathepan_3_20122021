@@ -18,7 +18,7 @@ body{
         justify-content: center;
         transform: scale(0);
 
-        animation: screen 3.9s;
+        animation: screen 2.7s;
     }
     
 
@@ -28,7 +28,7 @@ body{
         opacity: 0;
         transform: scale(0);
         background-color: $grisclair;
-        animation: fading 3.9s cubic-bezier(.77,.27,.79,.27);
+        animation: fading 2.7s cubic-bezier(.77,.27,.79,.27);
     }
 
     &_icon {
@@ -40,7 +40,7 @@ body{
         height:100px;
         margin-top: 400px;
         transform: scale(0);
-        animation: chargement 1.3s linear;
+        animation: chargement 0.9s linear;
         animation-iteration-count: 3;
     }
 }
