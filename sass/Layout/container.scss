@@ -310,8 +310,9 @@ body{
         flex-direction: column;
         align-items: center;
         row-gap: 15px;
-        transform-origin: top;
-        animation: affichage 2s;
+        
+
+       
     }
 
     &_plat {
@@ -325,6 +326,13 @@ body{
         border-radius: 15px;
         @include shadow_fonce;        
         overflow: hidden;
+        transform-origin: bottom;
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                $y: $i * 0.6 ;
+                animation: affichage#{$i} #{$y}s cubic-bezier(.15,.29,.48,.87);
+            }
+        }
         
 
         &:hover , &:focus {

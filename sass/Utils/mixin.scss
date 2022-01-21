@@ -46,11 +46,56 @@
     }
 }
 
-@keyframes affichage {
+@keyframes affichage_plat {
     from {
         transform: scaleY(0);
     }
     to {
         transform: scaleY(1);
+    }
+}
+
+@keyframes affichage1{
+    0% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes affichage2{
+    0% {
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes affichage3{
+    0% {
+        transform: scale(0);
+    }
+    66%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes affichage4{
+    0% {
+        transform: scale(0);
+    }
+    75%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
     }
 }
