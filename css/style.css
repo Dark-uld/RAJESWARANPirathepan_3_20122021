@@ -438,7 +438,7 @@ body {
   row-gap: 15px;
 }
 .menu_plat {
-  height: 75px;
+  height: 70px;
   width: 325px;
   max-width: 100%;
   background-color: white;
@@ -509,7 +509,7 @@ body {
   width: 100%;
 }
 .menu_description h3, .menu_description div {
-  height: 25px;
+  height: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
