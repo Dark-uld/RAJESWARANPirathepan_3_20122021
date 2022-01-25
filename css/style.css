@@ -183,6 +183,8 @@ header a i {
 body {
   min-height: 100%;
   position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .zooming:hover {
