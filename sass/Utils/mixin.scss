@@ -21,6 +21,10 @@
     margin: 0 auto;
 }
 
+@mixin boutton_background($colour1:$second, $colour2: $prim){
+    background: linear-gradient(to bottom right,  adjust-hue($colour1, 20deg), adjust-hue($colour2, 20deg));
+}
+
 
 @keyframes rotation {
 

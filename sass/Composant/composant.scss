@@ -53,8 +53,11 @@
     font-weight: 600;
     box-shadow: 0px 3px 4px 2px $shadowclair;
     &:hover{
-    background: linear-gradient(to bottom right,  $prim, $second);
-    box-shadow: 0px 3px 4px 2px $shadowfonce;
+       @include boutton_background;
+    box-shadow: 0px 3px 4px 3px $shadowfonce;
     }
 }
+
+
+
 
