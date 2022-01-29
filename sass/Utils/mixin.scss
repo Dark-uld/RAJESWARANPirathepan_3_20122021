@@ -7,24 +7,39 @@
     box-shadow: 0px 0px 5px 1px rgba(150, 150, 150, 0.25);
 }
 
+@mixin plat_width {
+        width: 325px;
+    
+}
+
+@mixin view_desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px 15px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
 
 @keyframes rotation {
+
     from {
-            transform: rotate(60deg);
+        transform: rotate(0deg);
     }
+    
     to {
-            transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes fading {
     from {
-        opacity: 0.7;
-        transform: scale(1);
+        opacity: 1;
     }
     to {
-       opacity: 0.2;
-       transform: scale(1);
+       opacity: 0.5;
+       visibility: hidden;
     }
 }
 
@@ -37,14 +52,7 @@
     }
 }
 
-@keyframes screen{
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1);
-    }
-}
+
 
 @keyframes affichage_plat {
     from {

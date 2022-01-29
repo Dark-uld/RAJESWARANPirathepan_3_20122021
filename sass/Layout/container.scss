@@ -18,19 +18,9 @@ body{
         height:100%;
         position: absolute;
         justify-content: center;
-        transform: scale(0);
-
-        animation: screen 2.7s;
-    }
-    
-
-    &_background {
-        width:100%;
-        height:100%;
-        opacity: 0;
-        transform: scale(0);
-        background-color: $grisclair;
-        animation: fading 2.7s cubic-bezier(.77,.27,.79,.27);
+        opacity: 1;
+        background-color: $blanc;
+        animation: fading 2.85s cubic-bezier(1,.12,.96,.46) forwards;
     }
 
     &_icon {
@@ -41,10 +31,10 @@ body{
         width:100px;
         height:100px;
         margin-top: 400px;
-        transform: scale(0);
-        animation: chargement 0.9s linear;
-        animation-iteration-count: 3;
+        animation: chargement 0.7s cubic-bezier(.75,.11,.27,.89) 4;
     }
+
+    
 }
 
 /* MAIN INDEX */
@@ -90,7 +80,7 @@ body{
 .fonction {
     padding: 65px 5% 65px 5%;
 
-    h1 {
+    h2 {
         margin-bottom: 30px;
     }
 
@@ -155,7 +145,7 @@ body{
     display: flex;
     flex-direction: column;
 
-    h1 {
+    h2 {
         margin-bottom: 20px;
     }
 
@@ -232,19 +222,19 @@ body{
 /* IMAGE PRESENTATION */
 
 .a_la_francaise {
-    background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
 
 .la_palette{
-    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-image: url("../images/restaurants/la_palette_gout.jpg");
 }
 
 .la_note {
-    background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-image: url("../images/restaurants/la_note_echantee.jpg");
 }
 
 .le_delice {
-    background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-image: url("../images/restaurants/le_delice_du_sens.jpg");
 }
 
 /* MENU */
@@ -252,7 +242,7 @@ body{
 .menu {
     
     &_affiche {
-        height: 250px;
+        height: 300px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -297,7 +287,7 @@ body{
         hr {
             width: 40px;
             border : 0.5px solid $tert;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -319,8 +309,7 @@ body{
 
     &_plat {
         height: 70px;
-        width: 325px;
-        max-width: 100%;
+        width: 100%;
         background-color: $blanc;
         display: flex;
         flex-direction: row;
@@ -490,18 +479,23 @@ body{
             width:100%;
         }
 
+        &_plat {
+            @include plat_width;
+        }
+
     }
 }
 
 /* FORMAT DESKTOP */
 @media (min-width: 1024px){
 
+    section h2 {
+        text-align: center;
+    }
+
     .fonction {
         &_liste{
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 25px 15px;
+           @include view_desktop;
 
         }
 
@@ -510,10 +504,7 @@ body{
 
     .restaurant {
         &_menu {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 25px 15px;
+           @include view_desktop;
         }
 
         &_carte {
@@ -564,6 +555,10 @@ body{
 
         &_check{
             width:100%;
+        }
+
+        &_plat {
+            @include plat_width;
         }
 
     }

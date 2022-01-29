@@ -32,7 +32,7 @@ a {
 
 @keyframes rotation {
   from {
-    transform: rotate(60deg);
+    transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
@@ -40,12 +40,11 @@ a {
 }
 @keyframes fading {
   from {
-    opacity: 0.7;
-    transform: scale(1);
+    opacity: 1;
   }
   to {
-    opacity: 0.2;
-    transform: scale(1);
+    opacity: 0.5;
+    visibility: hidden;
   }
 }
 @keyframes chargement {
@@ -54,14 +53,6 @@ a {
   }
   to {
     transform: rotate(360deg) scale(1);
-  }
-}
-@keyframes screen {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1);
   }
 }
 @keyframes affichage_plat {
@@ -198,16 +189,9 @@ body {
   height: 100%;
   position: absolute;
   justify-content: center;
-  transform: scale(0);
-  animation: screen 2.7s;
-}
-.loading_background {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transform: scale(0);
-  background-color: #a7a7a7;
-  animation: fading 2.7s cubic-bezier(0.77, 0.27, 0.79, 0.27);
+  opacity: 1;
+  background-color: white;
+  animation: fading 2.85s cubic-bezier(1, 0.12, 0.96, 0.46) forwards;
 }
 .loading_icon {
   position: absolute;
@@ -217,9 +201,7 @@ body {
   width: 100px;
   height: 100px;
   margin-top: 400px;
-  transform: scale(0);
-  animation: chargement 0.9s linear;
-  animation-iteration-count: 3;
+  animation: chargement 0.7s cubic-bezier(0.75, 0.11, 0.27, 0.89) 4;
 }
 
 /* MAIN INDEX */
@@ -260,7 +242,7 @@ body {
 .fonction {
   padding: 65px 5% 65px 5%;
 }
-.fonction h1 {
+.fonction h2 {
   margin-bottom: 30px;
 }
 .fonction_liste {
@@ -315,7 +297,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.restaurant h1 {
+.restaurant h2 {
   margin-bottom: 20px;
 }
 .restaurant_menu {
@@ -374,24 +356,24 @@ body {
 /* MAIN MENU */
 /* IMAGE PRESENTATION */
 .a_la_francaise {
-  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../images/restaurants/a_la_francaise.jpg");
 }
 
 .la_palette {
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../images/restaurants/la_palette_gout.jpg");
 }
 
 .la_note {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../images/restaurants/la_note_echantee.jpg");
 }
 
 .le_delice {
-  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/le_delice_du_sens.jpg");
 }
 
 /* MENU */
 .menu_affiche {
-  height: 250px;
+  height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -427,7 +409,7 @@ body {
 .menu_choice hr {
   width: 40px;
   border: 0.5px solid #99E2D0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .menu_choice h2 {
   margin-bottom: 5px;
@@ -441,8 +423,7 @@ body {
 }
 .menu_plat {
   height: 70px;
-  width: 325px;
-  max-width: 100%;
+  width: 100%;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -573,14 +554,23 @@ body {
   .menu_check {
     width: 100%;
   }
+  .menu_plat {
+    width: 325px;
+  }
 }
 /* FORMAT DESKTOP */
 @media (min-width: 1024px) {
+  section h2 {
+    text-align: center;
+  }
+
   .fonction_liste {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 25px 15px;
+    max-width: 1350px;
+    margin: 0 auto;
   }
 
   .restaurant_menu {
@@ -588,6 +578,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 25px 15px;
+    max-width: 1350px;
+    margin: 0 auto;
   }
   .restaurant_carte {
     width: 275px;
@@ -624,6 +616,9 @@ body {
   }
   .menu_check {
     width: 100%;
+  }
+  .menu_plat {
+    width: 325px;
   }
 }
 /* FOOTER */
