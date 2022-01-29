@@ -22,9 +22,12 @@
 }
 
 @mixin boutton_background($colour1:$second, $colour2: $prim){
-    background: linear-gradient(to bottom right,  adjust-hue($colour1, 20deg), adjust-hue($colour2, 20deg));
+    background: linear-gradient(to bottom right,  adjust-hue($colour1, 25deg), adjust-hue($colour2, 15deg));
 }
 
+@mixin padding {
+    padding: 65px 5%;
+}
 
 @keyframes rotation {
 
