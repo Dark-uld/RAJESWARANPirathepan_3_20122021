@@ -52,6 +52,14 @@ body{
         position: relative;
         left: -15px;
     }
+
+    &_form {
+        border: none;
+        background-color: rgb(234, 234, 234);
+        font-size: 17px;
+        font-weight: 400;
+        text-align: center;
+    }
 }
 
 /* EXPLORATION */
