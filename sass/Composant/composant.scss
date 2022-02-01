@@ -1,17 +1,23 @@
 
 .like {
-    width: 25px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     .logo {
         
-        width: 25px;
-        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
         position: relative;
         right: 25px;
         
+        display: flex;
+        align-items: center;
+        
         &_hover{
-            width: 25px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             font-size: 25px;
@@ -25,11 +31,11 @@
             transform: scale(0);
             transition: all 0.6s cubic-bezier(.47,.09,.94,.79);
         }
-
+        
         
 
     }
-    &:hover, &:focus, &:active  {
+    &:hover, &:active  {
         .logo {
             &_hover {
                 opacity: 1;
@@ -40,25 +46,32 @@
         
     }
 
-    
 
   
 }
 
 
+
+
 .boutton {
     width: 220px;
     height: 50px;
-    font-size: 16px;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(to bottom right, $second, $prim);
     border-radius: 25px;
     border: none;
-    font-weight: 600;
     box-shadow: 0px 3px 4px 2px $shadowclair;
-    &:hover, &:focus, &:active {
+    &:hover,  &:active {
        @include boutton_background;
     box-shadow: 0px 3px 4px 3px $shadowfonce;
+    }
+
+    a {
+        font-size: 16px;
+        color: white;
+        font-weight: 600;
     }
 }
 
