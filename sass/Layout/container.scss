@@ -5,8 +5,11 @@ body{
      scrollbar-width: none;  
 }
 
-.zooming:hover{
-    transform: scale(1.02);
+.zooming{
+    &:hover, &:focus, &:active {
+
+        transform: scale(1.02);
+    }
 }
 
 .loading {
@@ -95,6 +98,7 @@ body{
     &_liste{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     &_button {
@@ -138,13 +142,16 @@ body{
 
     }
 
-    &_button:hover{
+    &_button{
+        &:hover, &:focus, &:active {
         background-color: $prim_claire;
 
         .fonction_logo {
             color: $prim;
         }
     }
+    }
+    
 }
 
 /* RESTAURANT */
@@ -335,7 +342,7 @@ body{
         }
         
 
-        &:hover , &:focus {
+        &:hover, &:focus, &:active  {
             
             cursor: pointer;
             .menu_commande {
@@ -429,6 +436,10 @@ body{
 
         }
 
+        &_button {
+            margin-bottom: 0px;
+        }
+
     }
 
 
@@ -506,6 +517,10 @@ body{
         &_liste{
            @include view_desktop;
 
+        }
+
+        &_button {
+            margin-bottom: 0px;
         }
 
     }
