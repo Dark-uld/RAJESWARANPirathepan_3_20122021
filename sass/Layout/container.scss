@@ -179,6 +179,7 @@ body{
         background-color: $blanc;
         border-radius: 10px;
         width: 100%;
+        position: relative;
     @include shadow_fonce;
        
 
@@ -342,7 +343,7 @@ body{
         }
         
 
-        &:hover, &:active  {
+        &:hover, &:focus, &:active{
             
             cursor: pointer;
             .menu_commande {

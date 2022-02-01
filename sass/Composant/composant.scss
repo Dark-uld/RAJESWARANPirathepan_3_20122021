@@ -4,6 +4,7 @@
     height: 40px;
     display: flex;
     align-items: center;
+    z-index: 49;
     .logo {
         
         width: 40px;
@@ -15,7 +16,7 @@
         display: flex;
         align-items: center;
         
-        &_hover{
+        &_plein{
             width: 40px;
             height: 40px;
             display: flex;
@@ -35,9 +36,9 @@
         
 
     }
-    &:hover, &:active  {
+    &:hover,&:focus, &:active  {
         .logo {
-            &_hover {
+            &_plein {
                 opacity: 1;
                 transform: scale(1);
 
@@ -46,8 +47,13 @@
         
     }
 
-
   
+}
+
+.position {
+    position : absolute;
+    bottom: 20px;
+    right: 20px;
 }
 
 
